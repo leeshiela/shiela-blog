@@ -3,12 +3,13 @@
 body {
   font-family: "Pontano Sans", sans-serif;
   margin: 2em;
+  padding: 20px;
 }
 
 .header {
   padding: 60px;
   text-align: center;
-  background: #1abc9c;
+  background-image: radial-gradient(circle, red, orange, red);
   color: white;
   font-size: 30px;
 }
@@ -30,18 +31,25 @@ h3 {
   text-align: center;
 }
 
-p{
+p {
   font-size: 18px;
 }
+
+#first-post {
+  margin-top: 20px;
+}
+
 .leftcolumn {
   float: left;
   width: 75%;
+  box-sizing: border-box;
 }
 
 .rightcolumn {
-  float: left;
+  float: right;
   width: 25%;
   padding-left: 20px;
+  box-sizing: border-box;
 }
 
 .blogpost {
@@ -49,18 +57,36 @@ p{
   padding: 50px;
   margin: 50px;
   box-shadow: 10px 10px 8px #888888;
+  border-radius: 25px;
 }
 
 .card {
   background-color: lightgrey;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 25px;
+  margin-top: 30px;
+  border-radius: 25px;
 }
 
 /* Clear floats after the columns, What does this mean? */
-.row:after {
+.row::after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
